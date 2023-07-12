@@ -35,7 +35,7 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TM5-pr-IMh" userLabel="PopUp">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TM5-pr-IMh" userLabel="PopUp">
                                 <rect key="frame" x="16" y="190" width="343" height="432"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Kpu-fd-H25">
@@ -56,7 +56,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Click Generate Staff number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g3S-lC-nU3" userLabel="Staff Number">
+                                            <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Click Generate Staff number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g3S-lC-nU3" userLabel="Staff Number">
                                                 <rect key="frame" x="0.0" y="177" width="211" height="34"/>
                                                 <accessibility key="accessibilityConfiguration">
                                                     <accessibilityTraits key="traits" notEnabled="YES"/>
@@ -72,6 +72,9 @@
                                         <color key="tintColor" systemColor="opaqueSeparatorColor"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Generate Staff Number"/>
+                                        <connections>
+                                            <action selector="numberGeneratorButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9C8-dc-SQW"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kuy-RR-B3F">
                                         <rect key="frame" x="135.33333333333334" y="355" width="72.666666666666657" height="38"/>
@@ -79,17 +82,31 @@
                                         <buttonConfiguration key="configuration" style="filled" title="Enroll">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="enrolledButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="izU-8U-Glf"/>
+                                        </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zwW-ac-Q44" userLabel="Display label">
+                                        <rect key="frame" x="171.66666666666666" y="311" width="0.0" height="21"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="lPg-5d-lxL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemMintColor"/>
                                 <constraints>
                                     <constraint firstItem="Kuy-RR-B3F" firstAttribute="top" secondItem="s41-UD-Hdj" secondAttribute="bottom" constant="64" id="DAk-bl-SoT"/>
                                     <constraint firstItem="Kpu-fd-H25" firstAttribute="centerX" secondItem="TM5-pr-IMh" secondAttribute="centerX" id="FMZ-sU-clo"/>
                                     <constraint firstItem="Kpu-fd-H25" firstAttribute="top" secondItem="TM5-pr-IMh" secondAttribute="top" constant="29" id="O27-OC-kX0"/>
+                                    <constraint firstItem="zwW-ac-Q44" firstAttribute="centerX" secondItem="TM5-pr-IMh" secondAttribute="centerX" id="SsR-FG-YM0"/>
                                     <constraint firstAttribute="bottom" secondItem="Kuy-RR-B3F" secondAttribute="bottom" constant="39" id="Y6J-9J-1VC"/>
                                     <constraint firstItem="Kuy-RR-B3F" firstAttribute="centerX" secondItem="s41-UD-Hdj" secondAttribute="centerX" id="d4W-YB-0bu"/>
                                     <constraint firstItem="Kpu-fd-H25" firstAttribute="leading" secondItem="TM5-pr-IMh" secondAttribute="leading" constant="66" id="g8l-xp-8vJ"/>
                                     <constraint firstItem="Kuy-RR-B3F" firstAttribute="centerX" secondItem="TM5-pr-IMh" secondAttribute="centerX" id="hv1-Hd-Op7"/>
+                                    <constraint firstAttribute="bottom" secondItem="zwW-ac-Q44" secondAttribute="bottom" constant="100" id="jW2-Ew-eCI"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -108,8 +125,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="ageInput" destination="hmi-fI-hzr" id="V31-oS-dYg"/>
+                        <outlet property="displayLabel" destination="zwW-ac-Q44" id="hTP-rN-RvG"/>
                         <outlet property="enrollButtonSelect" destination="Kuy-RR-B3F" id="EiW-Li-9hQ"/>
+                        <outlet property="jobTitleInput" destination="wCi-EO-Z3F" id="Any-X4-3nf"/>
+                        <outlet property="nameInput" destination="OMP-5m-G6A" id="yx7-kT-X1W"/>
                         <outlet property="popUpView" destination="TM5-pr-IMh" id="OOn-lQ-E22"/>
+                        <outlet property="staffNumber" destination="g3S-lC-nU3" id="AbC-Bn-JRL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
