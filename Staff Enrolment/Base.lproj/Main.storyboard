@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Staff_Enrolment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="86" translatesAutoresizingMaskIntoConstraints="NO" id="mIF-1h-IfH">
+                                <rect key="frame" x="82" y="234" width="211" height="146.66666666666663"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Employee Enrolment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="i3C-oD-kIx">
+                                        <rect key="frame" x="8" y="0.0" width="195" height="26.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cqp-t9-8SO">
+                                        <rect key="frame" x="39" y="112.3333333333333" width="133.33333333333334" height="34.333333333333329"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Add Employee"/>
+                                        <connections>
+                                            <action selector="addEmpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qb8-dm-ehA"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TM5-pr-IMh" userLabel="PopUp">
+                                <rect key="frame" x="16" y="190" width="343" height="432"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Kpu-fd-H25">
+                                        <rect key="frame" x="66" y="29" width="211" height="211"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OMP-5m-G6A" userLabel="Name">
+                                                <rect key="frame" x="0.0" y="0.0" width="211" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Age" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hmi-fI-hzr" userLabel="Age">
+                                                <rect key="frame" x="0.0" y="59" width="211" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Job Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wCi-EO-Z3F" userLabel="Job Title">
+                                                <rect key="frame" x="0.0" y="118" width="211" height="34"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Click Generate Staff number" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g3S-lC-nU3" userLabel="Staff Number">
+                                                <rect key="frame" x="0.0" y="177" width="211" height="34"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" notEnabled="YES"/>
+                                                </accessibility>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                        </subviews>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s41-UD-Hdj">
+                                        <rect key="frame" x="71" y="256.66666666666669" width="201" height="34.333333333333314"/>
+                                        <color key="backgroundColor" systemColor="labelColor"/>
+                                        <color key="tintColor" systemColor="opaqueSeparatorColor"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Generate Staff Number"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kuy-RR-B3F">
+                                        <rect key="frame" x="135.33333333333334" y="355" width="72.666666666666657" height="38"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Enroll">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="20"/>
+                                        </buttonConfiguration>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemMintColor"/>
+                                <constraints>
+                                    <constraint firstItem="Kuy-RR-B3F" firstAttribute="top" secondItem="s41-UD-Hdj" secondAttribute="bottom" constant="64" id="DAk-bl-SoT"/>
+                                    <constraint firstItem="Kpu-fd-H25" firstAttribute="centerX" secondItem="TM5-pr-IMh" secondAttribute="centerX" id="FMZ-sU-clo"/>
+                                    <constraint firstItem="Kpu-fd-H25" firstAttribute="top" secondItem="TM5-pr-IMh" secondAttribute="top" constant="29" id="O27-OC-kX0"/>
+                                    <constraint firstAttribute="bottom" secondItem="Kuy-RR-B3F" secondAttribute="bottom" constant="39" id="Y6J-9J-1VC"/>
+                                    <constraint firstItem="Kuy-RR-B3F" firstAttribute="centerX" secondItem="s41-UD-Hdj" secondAttribute="centerX" id="d4W-YB-0bu"/>
+                                    <constraint firstItem="Kpu-fd-H25" firstAttribute="leading" secondItem="TM5-pr-IMh" secondAttribute="leading" constant="66" id="g8l-xp-8vJ"/>
+                                    <constraint firstItem="Kuy-RR-B3F" firstAttribute="centerX" secondItem="TM5-pr-IMh" secondAttribute="centerX" id="hv1-Hd-Op7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TM5-pr-IMh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5HW-Jq-fGa"/>
+                            <constraint firstItem="TM5-pr-IMh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="140" id="EGP-Xo-ago"/>
+                            <constraint firstItem="mIF-1h-IfH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mwh-85-A65"/>
+                            <constraint firstItem="TM5-pr-IMh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bcW-8n-hGj"/>
+                            <constraint firstItem="TM5-pr-IMh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bfz-nY-ta6"/>
+                            <constraint firstItem="mIF-1h-IfH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="82" id="bvw-X6-Qzi"/>
+                            <constraint firstItem="mIF-1h-IfH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="184" id="nBv-tQ-9EU"/>
+                            <constraint firstItem="TM5-pr-IMh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oob-wD-acC"/>
+                            <constraint firstItem="TM5-pr-IMh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xUs-6O-Sjx"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="enrollButtonSelect" destination="Kuy-RR-B3F" id="EiW-Li-9hQ"/>
+                        <outlet property="popUpView" destination="TM5-pr-IMh" id="OOn-lQ-E22"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20" y="3.6945812807881775"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="labelColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemMintColor">
+            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
