@@ -32,13 +32,45 @@ class ViewController: UIViewController {
 
     
     
-    // Popup screen buttons
+  // Staff number generator function
     var staffNumberArray = [Int]()
     func getStaffNumber() -> Int{
         let countOfStaffNumbers = staffNumberArray.count
         return countOfStaffNumbers + 1
     }
     
+    
+    // Check if all fields contain text
+    func allTextFieldsContainText() -> Bool {
+//        guard let nameInput = nameInput.text,
+//              let ageInput = ageInput.text,
+//              let jobInput = jobTitleInput.text,
+//              let staffNumber = staffNumber.text else {
+//            return false
+//        }
+//        print(nameInput,ageInput,jobInput,staffNumber)
+//        return true
+        
+        if nameInput.text != ""{
+            if ageInput.text != "" {
+                if jobTitleInput.text != "" {
+                    if staffNumber.text != "" {
+                        return true
+                    } else {
+                        return false
+                    }
+                } else {
+                    return false
+                }
+            } else {
+                return false
+            }
+        } else {
+            return false
+        }
+    }
+    
+    // Popup screen buttons
     @IBAction func numberGeneratorButtonPressed(_ sender: UIButton) {
         let newStaffNumber = getStaffNumber()
         staffNumber!.text = "Staff number: \(String(newStaffNumber))"
@@ -46,8 +78,13 @@ class ViewController: UIViewController {
         
     }
     
+    
     @IBAction func enrolledButtonPressed(_ sender: UIButton) {
-        
+        if allTextFieldsContainText() {
+            displayLabel.text = "Success. Employee Enrolled"
+        } else {
+            displayLabel.text = "Please fill in all fields."
+        }
         
     }
     
