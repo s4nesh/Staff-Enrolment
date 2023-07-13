@@ -66,7 +66,7 @@ class ViewController: UIViewController {
     @IBAction func numberGeneratorButtonPressed(_ sender: UIButton) {
         let newStaffNumber = getStaffNumber()
         staffNumber!.text = "Staff number: \(String(newStaffNumber))"
-        staffNumberArray.append(newStaffNumber)
+//        staffNumberArray.append(newStaffNumber)
         
     }
     
