@@ -30,15 +30,7 @@ class ViewController: UIViewController {
     }
     
 
-    
-    
-  // Staff number generator function
-    var staffNumberArray = [Int]()
-    func getStaffNumber() -> Int{
-        let countOfStaffNumbers = staffNumberArray.count
-        return countOfStaffNumbers + 1
-    }
-    
+
     
     // Check if all fields contain text
     func allTextFieldsContainText() -> Bool {
