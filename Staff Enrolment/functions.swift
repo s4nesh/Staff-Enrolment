@@ -14,4 +14,3 @@ func getStaffNumber() -> Int {
     return countOfEmployees + 1
 }
 
-
