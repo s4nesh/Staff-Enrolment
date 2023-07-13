@@ -14,16 +14,10 @@ struct Employee {
     var jobTitle: String?
     var staffNumber: Int
     
-    enum JobTitle {
-        case branchManager, areaManager, technician, cleaner
-    }
-    
-//    init(fullName: String, age: Int, jobTitle: JobTitle, staffNumber: Int) {
-//        self.fullName = fullName
-//        self.age = age
-//        self.jobTitle = jobTitle
-//        self.staffNumber = staffNumber
+//    enum JobTitle {
+//        case branchManager, areaManager, technician, cleaner
 //    }
+    
     
     init?(fullName: String?, age: Int?, jobTitle: String?, staffNumber: Int? = nil) {
         if let fullName = fullName {
