@@ -7,5 +7,5 @@
 
 import Foundation
 
-let listOfEmployees = [Employee]()
-let employeeNumbers = [Int]()
+var listOfEmployees = [Employee]()
+var employeeNumbers = [Int]()

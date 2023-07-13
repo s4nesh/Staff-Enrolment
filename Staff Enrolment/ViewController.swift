@@ -33,15 +33,17 @@ class ViewController: UIViewController {
     
 
     // Create employee
-    func createEmployee() {
+    func createEmployee() -> Employee? {
         guard let nameIntput = nameInput.text,
               let ageInput = ageInput.text,
               let jobTitleInput = jobTitleInput.text,
               let staffNumber = staffNumber.text else {
-            return
+            return nil
         }
         
         let newEmployee = Employee(fullName: nameIntput, age: Int(ageInput), jobTitle: jobTitleInput, staffNumber: Int(staffNumber))
+     
+        return newEmployee
     }
 
     
@@ -53,9 +55,13 @@ class ViewController: UIViewController {
     
     
     @IBAction func enrolledButtonPressed(_ sender: UIButton) {
-        createEmployee()
-        
-        
+        let employeeToEnrol = createEmployee()
+        if let employeeToEnrol = employeeToEnrol {
+            listOfEmployees.append(employeeToEnrol)
+            displayLabel.text = "Success. Employee has been enrolled."
+        } else {
+            displayLabel.text = "Please fill in all fields."
+        }
     }
     
 }
