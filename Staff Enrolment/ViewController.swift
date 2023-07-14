@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var popUpView: UIView!
     @IBOutlet weak var nameInput: UITextField!
@@ -23,12 +23,21 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // The delagate method added to dismiss the keyboard when pressing return on the keyboard. Snippet taken from the web
+        
+        nameInput.delegate = self
+        jobTitleInput.delegate = self
         popUpView.isHidden = true
         doneButton.isEnabled = false
-//        enrollButtonSelect.isEnabled = false
+
     }
-    
-    
+  
+        // Snippet taken from the internet to dismis keyboard. Class also modified: added UITextfieldDelegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+           textField.resignFirstResponder() // dismiss keyboard
+           return true
+       }
 
     @IBAction func addEmpButton(_ sender: UIButton) {
         popUpView.isHidden = false
