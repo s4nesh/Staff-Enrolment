@@ -14,7 +14,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var ageInput: UITextField!
     @IBOutlet weak var jobTitleInput: UITextField!
     @IBOutlet weak var enrollButtonSelect: UIButton!
-
+    @IBOutlet weak var doneButton: UIButton!
+    
+    @IBOutlet weak var enrolButton: UIButton!
     @IBOutlet weak var displayLabel: UILabel!
     @IBOutlet weak var staffNumber: UITextField!
     
@@ -22,6 +24,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         popUpView.isHidden = true
+        doneButton.isEnabled = false
 //        enrollButtonSelect.isEnabled = false
     }
     
@@ -59,6 +62,8 @@ class ViewController: UIViewController {
         if let employeeToEnrol = employeeToEnrol {
             listOfEmployees.append(employeeToEnrol)
             displayLabel.text = "Success. Employee has been enrolled."
+            doneButton.isEnabled = true
+            enrolButton.isEnabled = false
         } else {
             displayLabel.text = "Please fill in all fields."
         }

@@ -36,7 +36,7 @@
                                 </subviews>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TM5-pr-IMh" userLabel="PopUp">
-                                <rect key="frame" x="16" y="190" width="343" height="432"/>
+                                <rect key="frame" x="16" y="190" width="343" height="479"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Kpu-fd-H25">
                                         <rect key="frame" x="66" y="29" width="211" height="211"/>
@@ -95,6 +95,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pA8-5p-brA">
+                                        <rect key="frame" x="137" y="422" width="69" height="37"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Done">
+                                            <fontDescription key="titleFontDescription" type="system" pointSize="19"/>
+                                        </buttonConfiguration>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemMintColor"/>
                                 <constraints>
@@ -102,11 +109,13 @@
                                     <constraint firstItem="Kpu-fd-H25" firstAttribute="centerX" secondItem="TM5-pr-IMh" secondAttribute="centerX" id="FMZ-sU-clo"/>
                                     <constraint firstItem="Kpu-fd-H25" firstAttribute="top" secondItem="TM5-pr-IMh" secondAttribute="top" constant="29" id="O27-OC-kX0"/>
                                     <constraint firstItem="zwW-ac-Q44" firstAttribute="centerX" secondItem="TM5-pr-IMh" secondAttribute="centerX" id="SsR-FG-YM0"/>
-                                    <constraint firstAttribute="bottom" secondItem="Kuy-RR-B3F" secondAttribute="bottom" constant="39" id="Y6J-9J-1VC"/>
+                                    <constraint firstAttribute="bottom" secondItem="Kuy-RR-B3F" secondAttribute="bottom" constant="86" id="Y6J-9J-1VC"/>
                                     <constraint firstItem="Kuy-RR-B3F" firstAttribute="centerX" secondItem="s41-UD-Hdj" secondAttribute="centerX" id="d4W-YB-0bu"/>
+                                    <constraint firstItem="pA8-5p-brA" firstAttribute="top" secondItem="Kuy-RR-B3F" secondAttribute="bottom" constant="29" id="eyI-MX-Rqe"/>
                                     <constraint firstItem="Kpu-fd-H25" firstAttribute="leading" secondItem="TM5-pr-IMh" secondAttribute="leading" constant="66" id="g8l-xp-8vJ"/>
                                     <constraint firstItem="Kuy-RR-B3F" firstAttribute="centerX" secondItem="TM5-pr-IMh" secondAttribute="centerX" id="hv1-Hd-Op7"/>
-                                    <constraint firstAttribute="bottom" secondItem="zwW-ac-Q44" secondAttribute="bottom" constant="100" id="jW2-Ew-eCI"/>
+                                    <constraint firstAttribute="bottom" secondItem="zwW-ac-Q44" secondAttribute="bottom" constant="147" id="jW2-Ew-eCI"/>
+                                    <constraint firstItem="pA8-5p-brA" firstAttribute="centerX" secondItem="TM5-pr-IMh" secondAttribute="centerX" id="sMO-hq-yJ8"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -117,16 +126,18 @@
                             <constraint firstItem="TM5-pr-IMh" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="140" id="EGP-Xo-ago"/>
                             <constraint firstItem="mIF-1h-IfH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Mwh-85-A65"/>
                             <constraint firstItem="TM5-pr-IMh" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bcW-8n-hGj"/>
-                            <constraint firstItem="TM5-pr-IMh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="bfz-nY-ta6"/>
+                            <constraint firstItem="TM5-pr-IMh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="23.5" id="bfz-nY-ta6"/>
                             <constraint firstItem="mIF-1h-IfH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="82" id="bvw-X6-Qzi"/>
                             <constraint firstItem="mIF-1h-IfH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="184" id="nBv-tQ-9EU"/>
-                            <constraint firstItem="TM5-pr-IMh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="oob-wD-acC"/>
+                            <constraint firstItem="TM5-pr-IMh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="23.5" id="oob-wD-acC"/>
                             <constraint firstItem="TM5-pr-IMh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xUs-6O-Sjx"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="ageInput" destination="hmi-fI-hzr" id="V31-oS-dYg"/>
                         <outlet property="displayLabel" destination="zwW-ac-Q44" id="hTP-rN-RvG"/>
+                        <outlet property="doneButton" destination="pA8-5p-brA" id="gV8-OK-6Ld"/>
+                        <outlet property="enrolButton" destination="Kuy-RR-B3F" id="cTt-Cr-hVc"/>
                         <outlet property="enrollButtonSelect" destination="Kuy-RR-B3F" id="EiW-Li-9hQ"/>
                         <outlet property="jobTitleInput" destination="wCi-EO-Z3F" id="Any-X4-3nf"/>
                         <outlet property="nameInput" destination="OMP-5m-G6A" id="yx7-kT-X1W"/>
