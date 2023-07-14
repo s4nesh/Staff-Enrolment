@@ -32,6 +32,8 @@ class ViewController: UIViewController {
 
     @IBAction func addEmpButton(_ sender: UIButton) {
         popUpView.isHidden = false
+        doneButton.isEnabled = false
+        enrolButton.isEnabled = true
     }
     
 
@@ -61,12 +63,23 @@ class ViewController: UIViewController {
         let employeeToEnrol = createEmployee()
         if let employeeToEnrol = employeeToEnrol {
             listOfEmployees.append(employeeToEnrol)
+            employeeNumbers.append(Int(employeeToEnrol.staffNumber))
             displayLabel.text = "Success. Employee has been enrolled."
             doneButton.isEnabled = true
             enrolButton.isEnabled = false
         } else {
             displayLabel.text = "Please fill in all fields."
         }
+    }
+    
+    
+    @IBAction func doneButtonPressed(_ sender: UIButton) {
+        nameInput.text = nil
+        ageInput.text = nil
+        jobTitleInput.text = nil
+        staffNumber.text = nil
+        displayLabel.text = nil
+        popUpView.isHidden = true
     }
     
 }

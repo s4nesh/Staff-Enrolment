@@ -101,6 +101,9 @@
                                         <buttonConfiguration key="configuration" style="filled" title="Done">
                                             <fontDescription key="titleFontDescription" type="system" pointSize="19"/>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="doneButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="cSQ-K6-U4U"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemMintColor"/>
