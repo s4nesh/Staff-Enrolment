@@ -55,6 +55,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
             return nil
         }
         
+        // This if statement is a fix for bug when returning an employee even when nameInput and jobTitleInput have no values. Somehow the UItextField reads it as an empty string rather that nil and passes the gaurd statement above which returns an employee with empty string. This allows an employee to be created when enrol button is pressed.
+        if nameIntput == "" || jobTitleInput == "" {
+            return nil
+        }
+        
         let newEmployee = Employee(fullName: nameIntput, age: Int(ageInput), jobTitle: jobTitleInput, staffNumber: Int(staffNumber))
      
         return newEmployee
