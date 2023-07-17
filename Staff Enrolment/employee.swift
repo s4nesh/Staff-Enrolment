@@ -20,25 +20,10 @@ struct Employee {
     
     
     init?(fullName: String?, age: Int?, jobTitle: String?, staffNumber: Int? = nil) {
-        if let fullName = fullName {
+        if let fullName, let age, let jobTitle, let staffNumber {
             self.fullName = fullName
-        } else {
-            return nil
-        }
-        
-        if let age = age {
             self.age = age
-        } else {
-            return nil
-        }
-        
-        if let jobTitle = jobTitle {
             self.jobTitle = jobTitle
-        } else {
-            return nil
-        }
-        
-        if let staffNumber = staffNumber {
             self.staffNumber = staffNumber
         } else {
             return nil
